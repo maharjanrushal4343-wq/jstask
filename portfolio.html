@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rushal Maharjan</title>
+    <link rel="stylesheet" href="./css/portfolio.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-container">
+        <h2 class="logo">Rus<span>hal.</span></h2>
+
+        <button
+          onclick="toggleMenu()"
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="nav-link" onclick="closeMenu()">Home</a></li>
+          <li><a href="#about" class="nav-link" onclick="closeMenu()">About</a></li>
+          <li><a href="#skills" class="nav-link" onclick="closeMenu()">Skills</a></li>
+          <li><a href="#projects" class="nav-link" onclick="closeMenu()">Projects</a></li>
+          <li><a href="#contact" class="nav-link" onclick="closeMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <div class="container hero-container">
+        <h1>Hello, I'm <span>Rushal Maharjan</span></h1>
+        <p>A passionate Web Developer specializing in React.js and Node.js</p>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-container">
+        <img src="./public/images/rushal.jpg" alt="profile" />
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p class="about-me">
+            I am a dedicated full-stack developer with strong skills in
+            React.js, Node.js, HTML, CSS, and JavaScript. I enjoy building
+            responsive, user-friendly applications and exploring new
+            technologies.
+          </p>
+          <p class="about-me">
+            My goal is to work on impactful projects that allow me to grow and
+            contribute to innovative solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card">HTML</div>
+          <div class="skill-card">CSS</div>
+          <div class="skill-card">JavaScript</div>
+          <div class="skill-card">React.js</div>
+          <div class="skill-card">Node.js</div>
+          <div class="skill-card">Git & GitHub</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <img
+              src="https://img.freepik.com/free-vector/flat-design-e-commerce-website-landing-page_23-2149581940.jpg"
+              alt="Project 1"
+            />
+            <h3>Ecommerce Portal</h3>
+            <p>A web app built using React.js and Node.js.</p>
+          </div>
+
+          <div class="project-card">
+            <img src="./public/images/pbs.png" alt="Project 2" />
+            <h3>Pushpasadan School Website</h3>
+            <p>Responsive website using PHP, Laravel, Blade, Boostrap.</p>
+          </div>
+
+          <div class="project-card">
+            <img src="./public/images/kichastudio.png" alt="Project 3" />
+            <h3>Khicha Studio Portfolio</h3>
+            <p>Using React, HTML & CSS and Bootstrap.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-container">
+        <h2 class="section-title">Contact Me</h2>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="5" placeholder="Your Message"></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Rushal Maharjan. All Rights Reserved.</p>
+    </footer>
+    <script>
+      function toggleMenu() {
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburger.classList.toggle("open");
+        navLinks.classList.toggle("open");
+      }
+      
+      function closeMenu() {
+        document.getElementById("hamburger").classList.remove("open");
+        document.getElementById("nav-links").classList.remove("open");
+      }
+      closeMenu()
+    </script>
+  </body>
+</html>
